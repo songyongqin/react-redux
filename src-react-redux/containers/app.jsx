@@ -1,9 +1,9 @@
 import {connect} from 'react-redux'
 
-import {increate,decreate,increateAsync} from '../redux/actions'
+import {increate,decreate} from '../redux/actions'
 import Counters from '../components/counters'
 
 export default connect(
     state => ({count: state}),
-    {increate,decreate,increateAsync}
+    {increate,decreate}
 )(Counters)
