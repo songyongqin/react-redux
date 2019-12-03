@@ -1,5 +1,6 @@
-import {createStore} from 'redux'
-import {counter} from './reducers'
+// import {createStore} from 'redux'
+import {createStore} from '../libs/redux/index'
+import Reducers from './reducers'
+// import Reducers from '../libs/redux/index'
 
-let store = createStore(counter)
-export default store
+export default createStore(Reducers)
