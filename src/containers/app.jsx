@@ -7,3 +7,4 @@ export default connect(
   state => ({count:state.count, msgs: state.msgs}),
   {addCount, redCount, addMsg}
 )(Counter)
+

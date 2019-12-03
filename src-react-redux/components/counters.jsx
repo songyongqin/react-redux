@@ -7,7 +7,6 @@ export default class Counters extends Component {
         count: PropTypes.number.isRequired,
         increate: PropTypes.func.isRequired,
         decreate: PropTypes.func.isRequired,
-        increateAsync: PropTypes.func.isRequired
     }
 
     hangdleAdd = () => {
@@ -27,10 +26,9 @@ export default class Counters extends Component {
     }
     hangdleAddAsyn = () => {
         const num = this.select.value * 1
-        this.props.increateAsync(num)
-        // setTimeout(() => {
-        // this.props.increateAsync(num)
-        // }, 1000);
+        setTimeout(() => {
+        this.props.increate(num)
+        }, 1000);
     }
     render() {
         const {count} = this.props
