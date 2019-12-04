@@ -38,9 +38,6 @@ export default class Counter extends Component {
       this.props.addMsg(msg)
       this.input.value = ''
     }
-    componentDidUpdate(){
-      console.log(33,this.props)
-    }
 
     render() {
         const {count, msgs} = this.props

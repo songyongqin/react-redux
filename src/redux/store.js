@@ -1,7 +1,6 @@
-// import {createStore} from 'redux'
-import {createStore} from '../libs/redux/index'
+import {createStore} from 'redux'
+// import {createStore} from '../libs/redux/index'
 import Reducers from './reducers'
-// import Reducers from '../libs/redux/index'
-
+console.log('Reducers',Reducers)
 export default createStore(Reducers)
 

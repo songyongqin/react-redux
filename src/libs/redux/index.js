@@ -7,6 +7,7 @@
 // > 		subscribe(listener) 订阅一个state监听器
 
 export function createStore(reducer) {
+  console.log('reducer', reducer)
   //内部state
   let state
   let listeners = []
@@ -22,6 +23,7 @@ export function createStore(reducer) {
     state = reducer(state,action)
     //调用listener中所有的监视回调函数
     listeners.forEach(listener => listener())
+    return action
   }
   //订阅一个state监听器
   function subscribe(listener) {
